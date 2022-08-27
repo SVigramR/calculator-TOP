@@ -4,27 +4,6 @@ let operator = '';
 let display = [];
 let operation = [];
 
-function clear() {
-    currentOperationScreen.textContent = currentOperationScreen.textContent
-    .toString()
-    .slice(0, -1)
-}
-
-function allClear() {
-    return true;
-}
-
-function operatorOff() {
-    let aButton = document.getElementById('add');
-    let sButton = document.getElementById('subtract');
-    let mButton = document.getElementById('multiply');
-    let dButton = document.getElementById('divide');
-    aButton.disabled = true;
-    sButton.disabled = true;
-    mButton.disabled = true;
-    dButton.disabled = true;
-}
-
 function add(a, b) {
     return a + b;
 }
