@@ -4,6 +4,17 @@ let operator = '';
 let display = [];
 let operation = [];
 
+function operatorOff() {
+    let aButton = document.getElementById('add');
+    let sButton = document.getElementById('subtract');
+    let mButton = document.getElementById('multiply');
+    let dButton = document.getElementById('divide');
+    aButton.disabled = true;
+    sButton.disabled = true;
+    mButton.disabled = true;
+    dButton.disabled = true;
+}
+
 function add(a, b) {
     return a + b;
 }
