@@ -4,6 +4,12 @@ let operator = '';
 let display = [];
 let operation = [];
 
+function clear() {
+    currentOperationScreen.textContent = currentOperationScreen.textContent
+    .toString()
+    .slice(0, -1)
+}
+
 function operatorOff() {
     let aButton = document.getElementById('add');
     let sButton = document.getElementById('subtract');
