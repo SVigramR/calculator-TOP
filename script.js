@@ -1,11 +1,25 @@
 let num1 = '';
 let num2 = '';
 let operator = '';
-let display = [];
+let display = '';
 let operation = [];
 
+const oneBtn = document.getElementById("one");
+const twoBtn = document.getElementById("two");
+const threeBtn = document.getElementById("three");
+const fourBtn = document.getElementById("four");
+const fiveBtn = document.getElementById("five");
+const sixBtn = document.getElementById("six");
+const sevenBtn = document.getElementById("seven");
+const eightBtn = document.getElementById("eight");
+const nineBtn = document.getElementById("nine");
+const zeroBtn = document.getElementById("zero");
+const equalBtn = document.getElementById("equal");
+const acBtn = document.getElementById("all-clear");
+const clearBtn = document.getElementById("clear");
+
 function clear() {
-    currentOperationScreen.textContent = currentOperationScreen.textContent
+    display.textContent = display.textContent
     .toString()
     .slice(0, -1)
 }
@@ -58,3 +72,7 @@ console.log(add(4,2));
 console.log(subtract(4,2));
 console.log(multiply(4,2));
 console.log(divide(4,2));
+
+window.onload = () => {
+    operatorOff();
+}
