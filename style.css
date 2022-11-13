@@ -29,6 +29,11 @@ html, body {
     background-color: aquamarine;
 }
 
+#on-off>img {
+    height: 22px;
+    width: 1.5rem;
+}
+
 .btns {
     flex-direction: column;
     margin: 10px;
