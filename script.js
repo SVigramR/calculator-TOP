@@ -1,11 +1,11 @@
-let battery = true;
+let battery = false;
 let num1 = '';
 let num2 = '';
 let operator = '';
 let display = '';
 
-// const powerBtn = document.getElementById('on-off')
-// let allBtn = document.querySelectorAll('.btn').disabled = true;
+const powerBtn = document.getElementById('on-off')
+const allBtn = document.querySelectorAll('.btn');
 const numberBtns = document.querySelectorAll('[data-number]')
 const operatorBtns = document.querySelectorAll('[data-operator]')
 const equalBtn = document.getElementById("equal");
@@ -67,6 +67,17 @@ function equal() {
     show()
 }
 
+function togglePower() {
+    if (battery === true) {
+        allBtn.forEach((button) => button.setAttribute("disabled",1));
+        battery = false;
+        allClear();
+    } else if (battery === false) {
+        allBtn.forEach((button) => button.removeAttribute("disabled"));
+        battery = true;
+    }
+}
+
 function show() {
     screen.textContent = display;
 }
@@ -124,3 +135,8 @@ equalBtn.onclick = () => equal();
 dotBtn.onclick = () => addPoint();
 acBtn.onclick = () => allClear();
 clearBtn.onclick = () => clear();
+powerBtn.onclick = () => togglePower();
+
+window.onload = () => {
+    allBtn.forEach((button) => button.setAttribute("disabled",1))
+}
